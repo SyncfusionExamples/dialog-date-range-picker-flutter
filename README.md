@@ -66,3 +66,12 @@ void selectionChanged(DateRangePickerSelectionChangedArgs args) {
   });
 }
 ```
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/11467/how-to-add-a-date-range-picker-sfdaterangepicker-in-the-flutter-dialog-window)**
+
+**Screenshots**
+
+![selected date text](http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img1.png)
+
+![picker with selected date](http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img2.png)
+
+![date details](http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img3.png)
