@@ -70,8 +70,6 @@ void selectionChanged(DateRangePickerSelectionChangedArgs args) {
 
 **Screenshots**
 
-![selected date text](http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img1.png)
-
-![picker with selected date](http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img2.png)
-
-![date details](http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img3.png)
+<img alt="selected date text"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img1.png" width="250" height="300" />|
+<img alt="picker with selected date"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img2.png" width="250" height="300" />|
+<img alt="date details"  src="http://www.syncfusion.com/uploads/user/kb/flut/flut-891/flut-891_img3.png" width="250" height="300" />|
