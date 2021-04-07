@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -25,7 +23,7 @@ class SelectedDatePicker extends StatefulWidget {
 }
 
 class _SelectedDatePickerState extends State<SelectedDatePicker> {
-  String _selectedDate;
+  String? _selectedDate;
 
   @override
   void initState() {
@@ -34,49 +32,49 @@ class _SelectedDatePickerState extends State<SelectedDatePicker> {
   }
 
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            FlatButton(
-              child: Container(
-                child: _selectedDate ==null
-                    ? Text('Select a date '):Text(_selectedDate),
-              ),
-              onPressed: () {
-                showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                          title: Text(''),
-                          content: Container(
-                            height: 350,
-                            child: Column(
-                              children: <Widget>[
-                                getDateRangePicker(),
-                                FlatButton(
-                                  child: Text("OK"),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                )
-                              ],
-                            ),
-                          ));
-                    });
-              },
-            ),
-          ],
-        ));
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        MaterialButton(
+          child: Container(
+            child: _selectedDate == null
+                ? Text('Select a date ')
+                : Text(_selectedDate!),
+          ),
+          onPressed: () {
+            showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                      title: Text(''),
+                      content: Container(
+                        height: 350,
+                        child: Column(
+                          children: <Widget>[
+                            getDateRangePicker(),
+                            MaterialButton(
+                              child: Text("OK"),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            )
+                          ],
+                        ),
+                      ));
+                });
+          },
+        ),
+      ],
+    ));
   }
 
   void selectionChanged(DateRangePickerSelectionChangedArgs args) {
     _selectedDate = DateFormat('dd MMMM, yyyy').format(args.value);
 
-    SchedulerBinding.instance.addPostFrameCallback((duration) {
+    SchedulerBinding.instance!.addPostFrameCallback((duration) {
       setState(() {});
     });
   }
